@@ -1,0 +1,60 @@
+kind: pipeline
+type: kubernetes
+name: euoe-dev-docs
+
+steps:
+- name: go build
+  image: golang:1.15.2
+  environment:
+    # GONOSUMDB: github.com/mssgng/*
+    GOOS: linux 
+    GOARCH: amd64 
+    CGO_ENABLED: 0 
+  commands:
+  # - go env -w GOPRIVATE=github.com/mssgng
+  # - git config --global url."https://mssgng:$ACCESS_TOKEN@github.com".insteadOf "https://github.com"
+  # - go mod tidy
+  - go build -o server .
+
+- name: node build
+  image: node
+  commands:
+  - npm install
+  - npm build
+
+- name: docker build/push 
+  image: plugins/docker
+  settings:
+    username: euoedev
+    password: 
+      from_secret: docker-password
+    repo: registry.euoe.dev/euoe/euoe-dev-docs
+    registry: registry.euoe.dev
+    auto_tag: true
+
+- name: sed deployment & service files so k8s updates it
+  image: golang
+  commands: 
+  - sed -ie "s/valuevaluevalue/$(date)/g" k8s.yaml
+
+- name: deploy on k8s
+  image: bh90210/dron8s:0.1.8
+  settings:
+    yaml: ./k8s.yaml
+
+trigger:
+  event:
+  - tag
+  - push
+
+---
+kind: secret
+name: docker-password
+get:
+  path: drone-docker-registry
+  name: password
+
+# create the password:
+# echo -n "super-secure-password" > ./pass
+# kubectl create secret generic drone-docker-registry -n drone --from-file=password=./pass
+# rm ./pass
