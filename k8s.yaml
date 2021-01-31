@@ -9,16 +9,16 @@ spec:
   selector:
     matchLabels:
       name: euoe-docs
-      namespace: mssgng
+      namespace: euoe
   template:
     metadata:
       labels:
         name: euoe-docs
-        namespace: mssgng
+        namespace: euoe
     spec:
       containers:
       - name: euoe-docs
-        image: registry.euoe.dev/mssgng/euoe-docs:latest
+        image: registry.euoe.dev/euoe/euoe-dev-docs:latest
         imagePullPolicy: Always
         workingDir: /app
         command: ["/bin/sh"]
@@ -61,7 +61,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: euoe-docs
-  namespace: mssgng
+  namespace: euoe
 spec:
   ports:
   - protocol: TCP
