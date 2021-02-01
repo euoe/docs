@@ -20,7 +20,7 @@ steps:
   image: node
   commands:
   - npm install
-  - npm build
+  - npm run build
 
 - name: docker build/push 
   image: plugins/docker
@@ -53,8 +53,3 @@ name: docker-password
 get:
   path: drone-docker-registry
   name: password
-
-# create the password:
-# echo -n "super-secure-password" > ./pass
-# kubectl create secret generic drone-docker-registry -n drone --from-file=password=./pass
-# rm ./pass
