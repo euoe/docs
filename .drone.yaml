@@ -25,7 +25,7 @@ steps:
 - name: docker build/push 
   image: plugins/docker
   settings:
-    username: euoedev
+    username: euoe
     password: 
       from_secret: docker-password
     repo: registry.euoe.dev/euoe/euoe-dev-docs
