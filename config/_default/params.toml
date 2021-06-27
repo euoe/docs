@@ -58,7 +58,7 @@ alert = false
 alertText = "Like eu1? <a class=\"alert-link\" href=\"https://github.com/euoe/eu1/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/euoe/website"
+docsRepo = "https://github.com/euoe/euoe"
 editPage = true
 
 [options]
