@@ -1,26 +1,40 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Eu1"
+title = "eu1"
 titleSeparator = "-"
-titleAddition = "DNS Service"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+titleAddition = "Email & Messaging Service"
+description = ""
 
-## Open Graph + Twitter Cards
+## Open Graph
 images = ["doks.png"]
-twitterSite = "henkverlinde"
-twitterCreator = "henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
 ogLocale = "en_US"
+domainTLD = "doks.netlify.app"
+titleHome = "Doks Theme"
+
+## Twitter Cards
+twitterSite = "@getdoks"
+twitterCreator = "@henkverlinde"
 
 ## JSON-LD
+# schemaType = "Person"
 schemaType = "Organization"
-schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
-schemaSection = "blog"
+schemaName = "eu1"
+schemaAuthor = "bh90210"
+schemaAuthorTwitter = ""
+schemaAuthorLinkedIn = ""
+schemaAuthorGitHub = "https://github.com/euoe"
+schemaLocale = "en-US"
+schemaLogo = "eu1.png"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "eu1.png"
+schemaImageWidth = 1280
+schemaImageHeight = 640
+schemaTwitter = ""
+schemaLinkedIn = ""
+schemaGitHub = "https://github.com/euoe/eu1"
+schemaSection = "docs"
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
@@ -36,12 +50,25 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "<a href=\"https://euoe.dev/\">euoe.dev</a> DNS service by <a href=\"https://plaza.digigreencorp.ltd/\">DIGIGREENCORP LTD</a>"
+footer = "Consider supporting us bitcoin:bc1qvf7pp3gx3r3wue4kar70sdny8egu73y379gsk6"
+copyRight = "2021 euoe"
 
 # Alert
 alert = false
-alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alertText = "Like eu1? <a class=\"alert-link\" href=\"https://github.com/euoe/eu1/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/euoe/docs"
+docsRepo = "https://github.com/euoe/website"
 editPage = true
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  darkMode = true
+  bootStrapJs = true
+  breadCrumb = false
+  highLight = true
+  kaTex = false
+  collapsibleSidebar = false

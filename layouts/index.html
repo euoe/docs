@@ -1,14 +1,18 @@
 {{ define "main" }}
 <section class="section container-fluid mt-n3 pb-3">
   <div class="row justify-content-center">
+	<p align="center">
+		<img width="30%" src="https://user-images.githubusercontent.com/22690219/123357831-f64a8900-d572-11eb-8c86-5d1945be3ddc.png" />
+		<!-- <img width="20%" src="https://avatars.githubusercontent.com/u/72037569?s=200&v=4" /> -->
+	   </p>
     <div class="col-lg-12 text-center">
       <h1 class="mt-0">{{ .Title }}</h1>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead">{{ .Params.Lead | safeHTML }}</p>
-      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ "docs/getting-started/introduction/" | absURL }}" role="button">Read the docs</a>
-	  <!-- <p class="meta"><a href="https://github.com/euoe">GitHub v{{ .Site.Data.doks.version }}</a></p> -->
-	  <p class="meta"><a href="https://github.com/euoe">GitHub</a></p>
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ "docs/prologue/introduction/" | relURL }}" role="button">Get started</a>
+      <!-- <p class="meta">The Unlicense. <a href="https://github.com/euoe/eu1">GitHub v{{ $data := getJSON "https://raw.githubusercontent.com/h-enk/doks/master/package.json" }}{{ $data.version }}</a></p> -->
+      <p class="meta">The Unlicense. <a href="https://github.com/euoe/eu1">GitHub v0.0.0</a></p>
     </div>
   </div>
 </section>
@@ -19,30 +23,30 @@
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Wholesome API</h2>
-        <p>We offer our comprehensive DNS public API in RESTful, GraphQL & gRPC making adaption fast & easy.</p>
+        <h2 class="h4">Security aware</h2>
+        <p>Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Clients</h2>
-        <p>Official supported clients in Go, Java, Node.js, Rust, Python, Kotlin & Dart. More languages to follow, stay tuned.</p>
+        <h2 class="h4">Fast by default ⚡️</h2>
+        <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=7731347bb8ce999eff7428a8e763b637">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">CLI</h2>
-        <p>A powerful CLI supporting 100% of the API with some special extras. Use the service via your terminal or in your scripts.</p>
+        <h2 class="h4">SEO-ready</h2>
+        <p>Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.</p>
       </div>
     </div>
     <div class="row justify-content-center text-center">
       <div class="col-lg-5">
-        <h2 class="h4">Let's Encrypt</h2>
-        <p>Native support for Let's encrypt's DNS-01 challenge type whether on private server or Kubernetes cluster via cert-manager.</p>
+        <h2 class="h4">Full text search</h2>
+        <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Automation</h2>
-        <p>Integrate with your current automation tools. Support for Terraform, Drone, Github Actions with more to come.</p>
+        <h2 class="h4">Page layouts</h2>
+        <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
       </div>
       <div class="col-lg-5">
-        <h2 class="h4">Help Guides</h2>
-        <p>A collection of guides to aid you ie. Reserve DNS, monitor the service and other use case scenarios.</p>
+        <h2 class="h4">Dark mode</h2>
+        <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
       </div>
     </div>
   </div>

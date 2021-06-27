@@ -1,5 +1,7 @@
-functions
+bin
 node_modules
 public
 resources
-server
+# Local Netlify folder
+.netlify
+TODO
